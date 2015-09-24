@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <title>KatiePicNic</title>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body ng-app="katiepicnic">
+
+    <ui-view></ui-view>
+
+    <script type="text/ng-template" id="/home.html">
+
+        <img src={{photo_url}} class="pic" ng-click="newPhoto()">
+
+    </script>
+
+
+  </body>
+</html>
