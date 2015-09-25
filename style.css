@@ -1,8 +1,89 @@
-body {
+html body {
+  margin:0;
+  padding:0;
+  height:100%;
+  width:100%;
+  background:black;
+  text-align: center;
+}
+
+.photos {
+  /*float:left;*/
+  display:inline-block;
+  padding:1%;
+
+}
+
+.thumb{
+  padding:6%;
+}
+
+div {
   margin:0;
   padding:0;
 }
 
 .pic {
-  width:100%;
+  /*background:url(https://farm1.staticflickr.com/352/20130590648_4424fe37fc_o.jpg);*/
+  /*width:1000px;
+  height:1000px;*/
+  /*background-size:auto;*/
+
+  /*background: no-repeat center center fixed;*/
+  /* Set rules to fill background */
+  /*min-height: 100%;
+  min-width: 1024px;*/
+
+  /* Set up proportionate scaling */
+  /*width: 100%;
+  height: auto;*/
+  text-align: center;
+  margin:0 auto;
+  background:black;
+  /*height:100%;*/
+}
+
+#textBox{
+	width:100%;
+  position:absolute;
+  top:0px;
+  left:0px;
+  padding:0 5%;
+  margin:0;
+  font-family: 'Indie Flower', cursive;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  text-align:left;
+  background: rgba(0, 0, 0, .5);
+	z-index:10;
+	/*transition: opacity .4s ease;*/
+}
+
+.fit { /* set relative picture size */
+  max-width: 100%;
+  max-height: 100%;
+}
+.center {
+  display: block;
+  margin: auto;
+}
+body {
+    -moz-transition: width 1s ease-in-out, left 1.5s ease-in-out;
+    -webkit-transition: width 1s ease-in-out, left 1.5s ease-in-out;
+    -moz-transition: width 1s ease-in-out, left 1.5s ease-in-out;
+    -o-transition: width 1s ease-in-out, left 1.5s ease-in-out;
+    transition: width 1s ease-in-out, left 1.5s ease-in-out;
+}
+
+
+@media screen and (max-width:800px) {
+    body {
+        font-size:0.8em;
+    }
+}
+@media screen and (max-width:400px) {
+    body {
+        font-size:0.7em;
+    }
 }

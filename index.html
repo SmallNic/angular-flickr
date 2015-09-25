@@ -7,6 +7,10 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="app.js"></script>
+    <script src="jquery-photo-resize.js"></script>
+    <script src="application.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css">
   </head>
   <body ng-app="katiepicnic">
@@ -15,9 +19,18 @@
 
     <script type="text/ng-template" id="/home.html">
 
-        <img src={{photo.url}} class="pic" ng-click="newPhoto()">
-        <h1>{{photo.descrip}}<h2>
+      <div ng-repeat="photo in photos" class="photos row">
+          <a href="#/pics/{{$index}}"><img src={{photo.thumb}} class="thumb"></a>
+      </div>
+      <!-- //<div class="pic" ng-style="{'background': 'url(' + photo.url + ') no-repeat center center fixed'}" ng-click="newPhoto()"> -->
+      <!-- //</div> -->
+    </script>
 
+    <script type="text/ng-template" id="/pics.html">
+      <a href="#/home"><img src={{photo.url}} class="center fit" ng-click="newPhoto()"></a>
+      <div id="textBox">
+        <p id="text">{{photo.descrip}}</p>
+      </div>
     </script>
 
 
