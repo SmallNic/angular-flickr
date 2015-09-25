@@ -57,10 +57,10 @@ app.controller('MainCtrl', [
             if (picSizeData.sizes.size[sizeInd].label == "Large Square"){
               thumbIndex = sizeInd;
             }
-            if (picSizeData.sizes.size[sizeInd].label == "Medium 800"){
+            if (picSizeData.sizes.size[sizeInd].label == "Original"){
               sizeIndex = sizeInd;
             }
-            else if (picSizeData.sizes.size[sizeInd].label == "Original"){
+            else if (picSizeData.sizes.size[sizeInd].label == "Medium 800"){
               sizeIndex = sizeInd;
             }
           })
