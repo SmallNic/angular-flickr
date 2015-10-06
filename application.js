@@ -1,6 +1,6 @@
 $(document).ready(function(){
   console.log("jquery is running")
-  //
+
   // var h = $(window).height();
   // var w = $(window).width()*.9;
   //

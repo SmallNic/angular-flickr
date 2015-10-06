@@ -1,4 +1,4 @@
-var app = angular.module('katiepicnic', ['ui.router', 'ngResource']); //declare dependencies
+var app = angular.module('familyvacay', ['ui.router', 'ngResource']); //declare dependencies
 
 
 //Setup Controller
@@ -19,7 +19,7 @@ app.controller('MainCtrl', [
     $scope.index = 0;
 
     $scope.newPhoto = function(){
-      console.log("$scope.photo", $scope.photo)
+      // console.log("$scope.photo", $scope.photo)
       previousID = $scope.photo.id
       index = Math.floor(Math.random()*$scope.photos.length)
       nextID = $scope.photos[index].id
@@ -67,11 +67,11 @@ app.controller('MainCtrl', [
           if (picSizeData.sizes.size.length > 0){
             counter++
           }
-          console.log("counter", counter)
+          // console.log("counter", counter)
           // console.log("picSizeData.sizes.size[10].source", picSizeData.sizes.size[10].source)
-          console.log("picSizeData.sizes.size[sizeIndex]", picSizeData.sizes.size[sizeIndex])
-          console.log("picSizeData.sizes", picSizeData.sizes)
-          console.log("picSizeData", picSizeData)
+          // console.log("picSizeData.sizes.size[sizeIndex]", picSizeData.sizes.size[sizeIndex])
+          // console.log("picSizeData.sizes", picSizeData.sizes)
+          // console.log("picSizeData", picSizeData)
           url = picSizeData.sizes.size[sizeIndex].source;
           thumbUrl = picSizeData.sizes.size[thumbIndex].source;
           console.log("index", index, "-", id, "url:", url)
@@ -154,7 +154,7 @@ app.factory('pic_ids', ['$http', function($http){
   return {
     get: function(){
       return  $http({
-        url: 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=f171555321fcc7e567ecafaaf8c27c38&photoset_id=72157659074048001&user_id=130920742@N07&format=json',
+        url: 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=f171555321fcc7e567ecafaaf8c27c38&photoset_id=72157656418448548&user_id=130920742@N07&format=json',
         method: 'get',
       })
     }
